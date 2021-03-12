@@ -33,7 +33,7 @@ export default function NavBar() {
            data-testid="navigation-tabs">
         {
           data.map((item) =>
-            <button key={item.id} onClick={() => setActive(item)} className={active === item ? 'active' : ''}>{item.tabName}</button>
+            <a href={`#${item.tabName.toLowerCase()}`} key={item.id} onClick={() => setActive(item)} className={active === item ? 'active' : ''}>{item.tabName}</a>
           )
         }
       </div>
